@@ -93,13 +93,13 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL'
       },
-      orderStatusBuyer: {
+      order_status_buyer: {
         type: Sequelize.STRING,
-        defaultValue: 0,
+        defaultValue: '0',
       },
       order_status_provider: {
         type: Sequelize.STRING,
-        defaultValue: 0,
+        defaultValue: '0',
       },
       delivery_receipt: {
         type: Sequelize.STRING,
