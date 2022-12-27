@@ -85,8 +85,8 @@ module.exports = {
         onDelete: 'SET NULL'
       },
       confirm: {
-        type: Sequelize.TINYINT,
-        defaultValue: 1,
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
       },
       email: {
         type: Sequelize.STRING
