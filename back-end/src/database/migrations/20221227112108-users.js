@@ -4,18 +4,18 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('users', {
       id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
         type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
       },
       name: {
-        allowNull: false,
         type: Sequelize.STRING,
+        allowNull: false,
       },
       email: {
-        allowNull: false,
         type: Sequelize.STRING,
+        allowNull: false,
         unique: true,
       },
       phone_number: {
@@ -35,12 +35,15 @@ module.exports = {
       },
       created_at: {
         type: Sequelize.DATE,
+        allowNull: false,
       },
       updated_at: {
         type: Sequelize.DATE,
+        allowNull: false,
       },
       cashforce_adm: {
         type: Sequelize.TINYINT,
+        defaultValue: 0,
       }
     });
   },
