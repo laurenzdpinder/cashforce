@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       email_checked: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.BOOLEAN,
       },
       created_at: {
         type: Sequelize.DATE,
@@ -42,8 +42,8 @@ module.exports = {
         allowNull: false,
       },
       cashforce_adm: {
-        type: Sequelize.TINYINT,
-        defaultValue: 0,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       }
     });
   },
