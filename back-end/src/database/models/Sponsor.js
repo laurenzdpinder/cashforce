@@ -35,7 +35,7 @@ const Attributes = {
   website: {
     type: DataTypes.STRING,
   },
-  postal_code: {
+  postalCode: {
     type: DataTypes.STRING,
   },
   address: {
