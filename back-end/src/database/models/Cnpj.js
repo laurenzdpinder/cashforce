@@ -37,5 +37,12 @@ module.exports = (sequelize) => {
     }
   );
 
+  Cnpj.associate = (models) => {
+    Cnpj.hasOne(models.Buyer, { foreignKey: 'cnpjId', as: 'buyer' });
+    Cnpj.hasOne(models.Provider, { foreignKey: 'cnpjId', as: 'provider' });
+    Cnpj.hasOne(models.Sponsor, { foreignKey: 'cnpjId', as: 'sponsor' });
+    Cnpj.hasMany(models.Order, { foreignKey: 'cnpjId', as: 'orders' });
+  };
+
   return Cnpj;
 };

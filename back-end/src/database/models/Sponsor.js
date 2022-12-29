@@ -101,5 +101,10 @@ module.exports = (sequelize) => {
     }
   );
 
+  Sponsor.associate = (models) => {
+    Sponsor.belongsTo(models.Cnpj, { foreignKey: 'cnpjId', as: 'cnpj' });
+    Sponsor.hasMany(models.Offer, { foreignKey: 'sponsorId', as: 'offers' });
+  };
+
   return Sponsor;
 };

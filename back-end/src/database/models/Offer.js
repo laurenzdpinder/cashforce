@@ -66,5 +66,10 @@ module.exports = (sequelize) => {
     }
   );
 
+  Offer.associate = (models) => {
+    Offer.belongsTo(models.Order, { foreignKey: 'orderId', as: 'order' });
+    Offer.belongsTo(models.Sponsor, { foreignKey: 'sponsorId', as: 'sponsor' });
+  };
+
   return Offer;
 };
