@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
     Attributes,
     {
       tableName: 'cnpjs',
-      underscore: true,
+      underscored: true,
       timestamps: true,
     }
   );

@@ -96,7 +96,7 @@ module.exports = (sequelize) => {
     Attributes,
     {
       tableName: 'sponsors',
-      underscore: true,
+      underscored: true,
       timestamps: true,
     }
   );

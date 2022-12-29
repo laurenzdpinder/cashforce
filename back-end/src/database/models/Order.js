@@ -92,7 +92,7 @@ module.exports = (sequelize) => {
     Attributes,
     {
       tableName: 'orders',
-      underscore: true,
+      underscored: true,
       timestamps: true,
     }
   );

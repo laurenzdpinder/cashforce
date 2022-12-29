@@ -42,7 +42,7 @@ module.exports = (sequelize) => {
     Attributes,
     {
       tableName: 'orderportions',
-      underscore: true,
+      underscored: true,
       timestamps: true,
     }
   );
