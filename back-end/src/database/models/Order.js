@@ -42,7 +42,8 @@ const Attributes = {
     type: DataTypes.STRING
   },
   CTE: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    field: 'CTE'
   },
   value: {
     type: DataTypes.STRING
