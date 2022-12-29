@@ -7,31 +7,31 @@ const Attributes = {
     primaryKey: true,
     autoIncrement: true
   },
-  n_dup: {
+  nDup: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  d_venc: {
+  dVenc: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  v_dup: {
+  vDup: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  available_to_market: {
+  availableToMarket: {
     type: DataTypes.BOOLEAN,
     defaultValue: true
   },
-  created_at: {
+  createdAt: {
     type: DataTypes.DATE,
     allowNull: false
   },
-  updated_at: {
+  updatedAt: {
     type: DataTypes.DATE,
     allowNull: false
   },
-  order_id: {
+  orderId: {
     type: DataTypes.INTEGER,
   }
 };
