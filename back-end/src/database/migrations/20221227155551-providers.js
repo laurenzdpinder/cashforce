@@ -61,7 +61,7 @@ module.exports = {
       bank: {
         type: Sequelize.STRING,
       },
-      bankAgency: {
+      bank_agency: {
         type: Sequelize.STRING,
       },
       account: {
