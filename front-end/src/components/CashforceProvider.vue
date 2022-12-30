@@ -26,7 +26,7 @@ export default {
     };
   },
   async mounted() {
-    const provider = await fetchProviderbyId();
+    const provider = await fetchProviderbyId(this.$route.params.id);
     this.provider = provider;
     console.log(provider);
   },
