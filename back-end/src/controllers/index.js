@@ -1,4 +1,8 @@
 const {
+  readBuyerbyId,
+} = require('./Buyer');
+
+const {
   readOrders,
 } = require('./Order');
 
@@ -7,6 +11,7 @@ const {
 } = require('./Provider');
 
 module.exports = {
+  readBuyerbyId,
   readOrders,
   readProviderbyId,
 };
