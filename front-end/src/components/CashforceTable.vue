@@ -19,7 +19,7 @@
         <td>{{ order.emissionDate }}</td>
         <td>{{ order.value }}</td>
         <td>{{ order.orderStatusBuyer }}</td>
-        <button>Dados do cedente</button>
+        <button @click="viewProvider(order.providerId)">Dados do cedente</button>
       </tr>
     </tbody>
   </table>
@@ -38,7 +38,11 @@ export default {
   async mounted() {
     const orders = await fetchOrders();
     this.orders = orders;
-    console.log(orders);
+  },
+  methods: {
+    viewProvider(id) {
+      this.$router.push(`/providers/${id}`);
+    },
   },
 };
 </script>
