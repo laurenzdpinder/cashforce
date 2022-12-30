@@ -15,6 +15,7 @@ export default {
 
 <style>
 aside {
+  border: 2px solid blue;
   width: 288px;
 }
 </style>
