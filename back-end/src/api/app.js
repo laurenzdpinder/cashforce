@@ -9,5 +9,6 @@ app.use(express.json());
 
 app.use('/orders', routes.orderRouter);
 app.use('/providers', routes.providerRouter);
+app.use('/buyers', routes.buyerRouter);
 
 module.exports = app;
