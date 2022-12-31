@@ -26,7 +26,7 @@
 import fetchOrders from '../api/ordersApi';
 
 export default {
-  name: 'CashforceTable',
+  name: 'CashforceInvoice',
   data() {
     return {
       orders: [],

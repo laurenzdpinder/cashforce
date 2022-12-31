@@ -7,20 +7,20 @@
         <h3>Notas fiscais</h3>
         <p>Vizualize as notas fiscais que você tem.</p>
       </div>
-      <CashforceTable />
+      <CashforceInvoice />
     </div>
   </div>
 </template>
 
 <script>
 import CashforceSidebar from '@/components/CashforceSidebar.vue';
-import CashforceTable from '@/components/CashforceTable.vue';
+import CashforceInvoice from '@/components/CashforceInvoice.vue';
 
 export default {
   name: 'HomeView',
   components: {
     CashforceSidebar,
-    CashforceTable,
+    CashforceInvoice,
   },
 };
 </script>
