@@ -1,13 +1,13 @@
 <template>
-  <table>
+  <table class="home-table">
     <thead>
       <tr>
-        <th>Nota Fiscal</th>
-        <th>Sacado</th>
-        <th>Cedente</th>
-        <th>Emissão</th>
-        <th>Valor</th>
-        <th>Status</th>
+        <th>NOTA FISCAL</th>
+        <th>SACADO</th>
+        <th>CEDENTE</th>
+        <th>EMISSÃO</th>
+        <th>VALOR</th>
+        <th>STATUS</th>
         <th></th>
       </tr>
     </thead>
@@ -48,8 +48,5 @@ export default {
 </script>
 
 <style>
-th {
-  border: 1px solid black;
-  width: 140px;
-}
+
 </style>
