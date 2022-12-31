@@ -13,8 +13,7 @@
       <p>{{ order.nNf }}</p>
       <p>{{ order.buyer.name }}</p>
       <p>{{ order.provider.name }}</p>
-      <!-- <p>{{ order.emissionDate }}</p> -->
-      <p>dd/mm/yy</p>
+      <p>{{ formatEmissionDate(order.emissionDate) }}</p>
       <p>{{ order.value }}</p>
       <p>{{ order.orderStatusBuyer }}</p>
       <button @click="viewProvider(order.providerId)">Dados do cedente</button>
@@ -39,6 +38,14 @@ export default {
   methods: {
     viewProvider(id) {
       this.$router.push(`/providers/${id}`);
+    },
+    formatEmissionDate(dateString) {
+      const date = new Date(dateString);
+      return new Intl.DateTimeFormat('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: '2-digit',
+      }).format(date);
     },
   },
 };
