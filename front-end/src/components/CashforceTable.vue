@@ -1,28 +1,25 @@
 <template>
-  <table class="home-table">
-    <thead>
-      <tr>
-        <th>NOTA FISCAL</th>
-        <th>SACADO</th>
-        <th>CEDENTE</th>
-        <th>EMISSÃO</th>
-        <th>VALOR</th>
-        <th>STATUS</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="order in orders" :key="order.id">
-        <td>{{ order.nNf }}</td>
-        <td>{{ order.buyer.name }}</td>
-        <td>{{ order.provider.name }}</td>
-        <td>{{ order.emissionDate }}</td>
-        <td>{{ order.value }}</td>
-        <td>{{ order.orderStatusBuyer }}</td>
-        <button @click="viewProvider(order.providerId)">Dados do cedente</button>
-      </tr>
-    </tbody>
-  </table>
+  <main class="invoice">
+    <section class="invoice-head">
+      <p>NOTA FISCAL</p>
+      <p>SACADO</p>
+      <p>CEDENTE</p>
+      <p>EMISSÃO</p>
+      <p>VALOR</p>
+      <p>STATUS</p>
+      <p></p>
+    </section>
+    <section class="invoice-body" v-for="order in orders" :key="order.id">
+      <p>{{ order.nNf }}</p>
+      <p>{{ order.buyer.name }}</p>
+      <p>{{ order.provider.name }}</p>
+      <!-- <p>{{ order.emissionDate }}</p> -->
+      <p>dd/mm/yy</p>
+      <p>{{ order.value }}</p>
+      <p>{{ order.orderStatusBuyer }}</p>
+      <button @click="viewProvider(order.providerId)">Dados do cedente</button>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -48,5 +45,85 @@ export default {
 </script>
 
 <style>
+.invoice {
+  /* border: 1px solid black; */
+  margin: 0 47px 0 48px;
+}
 
+.invoice section {
+  padding: 15px 10px 15px 30px;
+  height: 48px;
+  /* min-width: 957px; */
+}
+
+.invoice p {
+  align-items: center;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: left;
+}
+
+.invoice-head {
+  /* border: 1px solid red; */
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.invoice-head p {
+  color: #A1A8B8;
+  line-height: 16px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  width: 94px;
+}
+
+.invoice-head p:last-child {
+  width: 165px;
+}
+
+.invoice-body {
+  align-items: center;
+  border: 1px solid #DFE2EB;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.invoice-body p {
+  color: #4D5566;
+  line-height: 18px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  width: 90px;
+}
+
+.invoice-body p:nth-child(n+5) {
+  color: #00AD8C;
+}
+
+.invoice button {
+  background-color: #FFFFFF;
+  border: 1px solid #DFE2EB;
+  border-radius: 24px;
+  color: #727D94;
+  cursor: pointer;
+  height: 32px;
+  line-height: 16px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 29px;
+  width: 165px;
+}
+
+.invoice button:hover {
+  border: 1px solid #00AD8C;
+  color: #00AD8C;
+  transition: 0.2s;
+}
 </style>
