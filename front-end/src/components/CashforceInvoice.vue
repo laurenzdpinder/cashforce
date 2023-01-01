@@ -14,7 +14,7 @@
       <p>{{ order.buyer.name }}</p>
       <p>{{ order.provider.name }}</p>
       <p>{{ formatEmissionDate(order.emissionDate) }}</p>
-      <p>{{ order.value }}</p>
+      <p>{{ formatValue(order.value) }}</p>
       <p>{{ order.orderStatusBuyer }}</p>
       <button @click="viewProvider(order.providerId)">Dados do cedente</button>
     </section>
@@ -46,6 +46,13 @@ export default {
         month: '2-digit',
         year: '2-digit',
       }).format(date);
+    },
+    formatValue(value) {
+      const fixedNumber = parseFloat(value).toFixed(2);
+      const parts = fixedNumber.split('.');
+      const localNumber = parseFloat(parts[0]).toLocaleString('pt-BR');
+      const formatedValue = localNumber.concat(',', parts[1]);
+      return `R$ ${formatedValue}`;
     },
   },
 };
