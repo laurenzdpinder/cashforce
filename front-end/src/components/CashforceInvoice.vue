@@ -15,7 +15,7 @@
       <p>{{ order.provider.name }}</p>
       <p>{{ formatEmissionDate(order.emissionDate) }}</p>
       <p>{{ formatValue(order.value) }}</p>
-      <p>{{ order.orderStatusBuyer }}</p>
+      <p>{{ formatStatus(order.orderStatusBuyer) }}</p>
       <button @click="viewProvider(order.providerId)">Dados do cedente</button>
     </section>
   </main>
@@ -54,6 +54,22 @@ export default {
       const formatedValue = localNumber.concat(',', parts[1]);
       return `R$ ${formatedValue}`;
     },
+    formatStatus(status) {
+      const statusArray = [
+        'Pendente de confirmação',
+        'Pedido confirmado',
+        'Não reconhece o pedido',
+        'Mercadoria não recebida',
+        'Recebida com avaria',
+        'Devolvida',
+        'Recebida com devolução parcial',
+        'Recebida e confirmada',
+        'Pagamento Autorizado',
+      ];
+      const numberStatus = parseFloat(status);
+      const formatedStatus = statusArray[numberStatus];
+      return formatedStatus;
+    },
   },
 };
 </script>
@@ -75,11 +91,13 @@ export default {
   /* border: 1px solid black; */
   display: flex;
   justify-content: left;
+  text-align: left;
+  width: 110px;
 }
 
 .invoice-head {
-  /* border: 1px solid red; */
   align-items: center;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 19px;
@@ -91,7 +109,6 @@ export default {
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  width: 94px;
 }
 
 .invoice-head p:last-child {
@@ -113,11 +130,12 @@ export default {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
-  width: 90px;
 }
 
 .invoice-body p:nth-child(n+5) {
+  /* border: 1px solid black; */
   color: #00AD8C;
+  margin-left: 0;
 }
 
 .invoice button {
