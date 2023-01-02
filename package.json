@@ -1,0 +1,23 @@
+{
+  "name": "cashforce-root",
+  "version": "1.0.0",
+  "description": "Root of Cashforce project",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "concurrently \"cd back-end && npm run debug\" \"cd front-end && npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenzdpinder/cashforce.git"
+  },
+  "author": "Laurenz Pinder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurenzdpinder/cashforce/issues"
+  },
+  "homepage": "https://github.com/laurenzdpinder/cashforce#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
