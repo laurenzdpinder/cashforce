@@ -138,6 +138,12 @@ export default {
   margin-left: 0;
 }
 
+.invoice-body p:nth-child(6) {
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .invoice button {
   background-color: #FFFFFF;
   border: 1px solid #DFE2EB;
@@ -149,7 +155,6 @@ export default {
   font-style: normal;
   font-size: 12px;
   font-weight: 700;
-  padding: 8px 29px;
   width: 165px;
 }
 
