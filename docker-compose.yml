@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+
+  db:
+    platform: linux/x86_64
+    image: mysql:8.0.21
+    restart: 'always'
+    ports:
+      - 3308:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    networks:
+      - shared-network
+
+  backend:
+    restart: unless-stopped
+    build: ./back-end
+    image: cashforce-backend
+    ports:
+      - 3001:3001
+    networks:
+      - shared-network
+    depends_on:
+      - "db"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_HOST=db
+      - MYSQL_PORT=3308
+
+  frontend:
+    restart: unless-stopped
+    build: ./front-end
+    image: cashforce-frontend
+    ports:
+      - 8080:8080
+    networks:
+      - shared-network
+    depends_on:
+      - "backend"
+
+networks:
+  shared-network:
+    driver: 'bridge'
