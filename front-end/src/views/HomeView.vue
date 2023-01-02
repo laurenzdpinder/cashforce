@@ -3,10 +3,13 @@
     <CashforceSidebar />
     <div class="home-main">
       <div class="blank-space" />
-      <div class="home-title">
-        <h3>Notas fiscais</h3>
+      <header class="home-title">
+        <div>
+          <img src="../assets/blue-hands.png" alt="Blue handshake emoji" />
+          <h3>Notas fiscais</h3>
+        </div>
         <p>Vizualize as notas fiscais que você tem.</p>
-      </div>
+      </header>
       <CashforceInvoice />
     </div>
   </div>
@@ -30,7 +33,7 @@ export default {
   /* border: 1px solid black; */
   display: flex;
   height: 100vh;
-  font-family: DM Sans;
+  /* font-family: 'DM Sans'; */
   min-width: 1340px;
 }
 
@@ -49,6 +52,19 @@ export default {
   /* border: 1px solid black; */
   text-align: left;
   margin: 0 47px 0 48px;
+}
+
+.home-title div {
+  align-items: center;
+  /* border: 1px solid black; */
+  display: flex;
+}
+
+.home-title img {
+  /* border: 1px solid black; */
+  height: 14.06px;
+  margin-right: 9px;
+  width: 24px;
 }
 
 .home-title h3 {

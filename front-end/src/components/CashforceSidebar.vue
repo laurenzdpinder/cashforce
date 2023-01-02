@@ -1,51 +1,54 @@
 <template>
   <aside>
-    <div>
-      <h1>Cashforce</h1>
+    <div class="side-logo">
+      <img src="../assets/logo.png" alt="Cashforce logo" />
     </div>
-    <div>
-      <p>img</p>
+    <div class="side-invoice">
+      <img src="../assets/green-hands.png" alt="Green handshake emoji" />
       <p>Notas fiscais</p>
     </div>
   </aside>
 </template>
 
 <script>
-
 export default {
   name: 'CashforceSidebar',
 };
-
 </script>
 
 <style>
 aside {
   background-color: #FBFDFE;
+  height: 100vh;
   min-width: 288px;
 }
 
-aside div:nth-child(1) {
+.side-logo {
   /* border: 1px solid black; */
   height: 80px;
 }
 
-aside div:nth-child(2) {
+.side-logo img {
+  /* border: 1px solid black; */
+  height: 80px;
+  width: 288px;
+}
+
+.side-invoice {
+  align-items: center;
   /* border: 1px solid black; */
   display: flex;
   margin-top: 23px;
 }
 
-aside p:nth-child(1) {
-  color: #00AD8C;
-  line-height: 18px;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  text-align: left;
-  padding-left: 25px;
+.side-invoice img {
+  /* border: 1px solid black; */
+  height: 14.06px;
+  margin-left: 25px;
+  width: 24px;
 }
 
-aside p:nth-child(2) {
+.side-invoice p {
   /* border: 1px solid black; */
   color: #00AD8C;
   line-height: 18px;
@@ -53,6 +56,6 @@ aside p:nth-child(2) {
   font-style: normal;
   font-weight: 500;
   text-align: left;
-  padding: 0 15px;
+  margin: 0 15px;
 }
 </style>
