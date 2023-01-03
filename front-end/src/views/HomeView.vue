@@ -30,15 +30,12 @@ export default {
 
 <style>
 .home {
-  /* border: 1px solid black; */
   display: flex;
   height: 100vh;
-  /* font-family: 'DM Sans'; */
   min-width: 1340px;
 }
 
 .home-main {
-  /* border: 1px solid red; */
   width: 100%;
 }
 
@@ -49,26 +46,22 @@ export default {
 }
 
 .home-title {
-  /* border: 1px solid black; */
   text-align: left;
   margin: 0 47px 0 48px;
 }
 
 .home-title div {
   align-items: center;
-  /* border: 1px solid black; */
   display: flex;
 }
 
 .home-title img {
-  /* border: 1px solid black; */
   height: 14.06px;
   margin-right: 9px;
   width: 24px;
 }
 
 .home-title h3 {
-  /* border: 1px solid black; */
   color: #021B51;
   font-size: 24px;
   font-style: normal;
@@ -78,7 +71,6 @@ export default {
 }
 
 .home-title p {
-  /* border: 1px solid black; */
   color: #727D94;
   font-size: 14px;
   font-style: normal;

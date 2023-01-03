@@ -76,19 +76,16 @@ export default {
 
 <style>
 .invoice {
-  /* border: 1px solid black; */
   margin: 0 47px 0 48px;
 }
 
 .invoice section {
   padding: 15px 10px 15px 30px;
   height: 48px;
-  /* min-width: 957px; */
 }
 
 .invoice p {
   align-items: center;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: left;
   text-align: left;
@@ -97,7 +94,6 @@ export default {
 
 .invoice-head {
   align-items: center;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 19px;
@@ -133,7 +129,6 @@ export default {
 }
 
 .invoice-body p:nth-child(n+5) {
-  /* border: 1px solid black; */
   color: #00AD8C;
   margin-left: 0;
 }

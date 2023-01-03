@@ -50,24 +50,19 @@ export default {
 
 <style>
 .provider-info {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  /* padding: 10px 0; */
   width: 100%;
 }
 
 .provider-info h3 {
   border-bottom: 1px solid #021B51;
-  /* border: 1px solid #021B51; */
   color: #021B51;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
-  /* padding: 15px 275px 5px 25px; */
-  /* padding-left: 25px; */
   margin-bottom: 30px;
   text-align: left;
 }
@@ -81,15 +76,5 @@ export default {
   font-weight: 700;
   padding: 15px 300px 5px 25px;
   text-align: left;
-}
-
-.provider-info div:nth-child(1) {
-  /* border: 1px solid red; */
-  /* width: 100%; */
-}
-
-.provider-info div:nth-child(2) {
-  /* border: 1px solid blue; */
-  /* width: 100%; */
 }
 </style>
