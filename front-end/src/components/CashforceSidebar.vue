@@ -3,10 +3,12 @@
     <div class="side-logo">
       <img src="../assets/logo.png" alt="Cashforce logo" />
     </div>
-    <div class="side-invoice">
-      <img src="../assets/green-hands.png" alt="Green handshake emoji" />
-      <p>Notas fiscais</p>
-    </div>
+    <router-link to="/" style="text-decoration: none;">
+      <div class="side-invoice">
+        <img src="../assets/green-hands.png" alt="Green handshake emoji" />
+        <p>Notas fiscais</p>
+      </div>
+    </router-link>
   </aside>
 </template>
 
