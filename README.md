@@ -2,7 +2,7 @@
 
 > O Cashforce é uma aplicação full stack que utiliza tecnologias como <strong>Node, Express, Sequelize e Vue</strong> para permitir que usuários visualizem notas ficais, incluindo informações sobre sacado, cedente, data de emissão, valor e status.
 
-<img src="https://user-images.githubusercontent.com/87544894/210375194-f804c9b8-6d8e-4288-aa34-b006a3a35f34.gif" alt="cashforce application gif" style="height: 80%; width: 80%;">
+<img src="https://user-images.githubusercontent.com/87544894/210434320-17a22474-6071-4cf6-8bd7-6a451fb40793.gif" alt="cashforce application gif" style="height: 65%; width: 65%;">
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
