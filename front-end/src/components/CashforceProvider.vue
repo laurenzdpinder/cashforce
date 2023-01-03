@@ -1,6 +1,6 @@
 <template>
   <div class="provider-info">
-    <div>
+    <div class="provider-info-div">
       <h3>Dados do cedente</h3>
       <p>Nome</p>
       <p>Nome Comercial</p>
@@ -14,7 +14,7 @@
       <p>Banco</p>
       <p>Agência e Conta</p>
     </div>
-    <div>
+    <div class="provider-info-div">
       <h3 style="color: #FFFFFF;">''</h3>
       <p>{{ provider.name }}</p>
       <p>{{ provider.tradingName }}</p>
@@ -52,8 +52,12 @@ export default {
 .provider-info {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  padding: 0 48px 0 47px;
   width: 100%;
+}
+
+.provider-info-div {
+  width: 50%;
 }
 
 .provider-info h3 {
@@ -70,11 +74,11 @@ export default {
 .provider-info p {
   border-bottom: 1px solid #A1A8B8;
   color: #A1A8B8;
-  line-height: 16px;
+  line-height: 26px;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  padding: 15px 300px 5px 25px;
+  padding: 10px 0;
   text-align: left;
 }
 </style>
