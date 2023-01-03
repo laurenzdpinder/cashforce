@@ -2,7 +2,7 @@
 
 > O Cashforce é uma aplicação full stack que utiliza tecnologias como <strong>Node, Express, Sequelize e Vue</strong> para permitir que usuários visualizem notas ficais, incluindo informações sobre sacado, cedente, data de emissão, valor e status.
 
-<img src="https://user-images.githubusercontent.com/87544894/210375194-f804c9b8-6d8e-4288-aa34-b006a3a35f34.gif" alt="cashforce application gif" style="height: 65%; width: 65%;">
+<img src="https://user-images.githubusercontent.com/87544894/210375194-f804c9b8-6d8e-4288-aa34-b006a3a35f34.gif" alt="cashforce application gif" style="height: 80%; width: 80%;">
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
@@ -110,7 +110,7 @@ cd cashforce
 docker-compose up -d --build
 ```
 
-4. Aguarde até que a mensagem `Connected on port 3001` apareça em seu terminal.
+4. Aguarde até que a inicialização dos containers do Docker esteja concluída, conforme indicado pelo terminal.
 
 5. Abra o navegador e acesse o seguinte endereço: http://localhost:8080
 
