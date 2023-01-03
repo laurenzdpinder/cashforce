@@ -4,7 +4,7 @@
   "description": "Root of Cashforce project",
   "main": "index.js",
   "scripts": {
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "install-all": "npm install && cd back-end && npm install && cd ../front-end && npm install",
     "start": "concurrently \"cd back-end && npm run debug\" \"cd front-end && npm run serve\""
   },
   "repository": {
