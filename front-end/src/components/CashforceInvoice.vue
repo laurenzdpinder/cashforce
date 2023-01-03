@@ -15,7 +15,9 @@
       <p>{{ order.provider.name }}</p>
       <p>{{ formatEmissionDate(order.emissionDate) }}</p>
       <p>{{ formatValue(order.value) }}</p>
-      <p>{{ formatStatus(order.orderStatusBuyer) }}</p>
+      <p :style="{ color: statusColors[order.orderStatusBuyer] }">
+        {{ formatStatus(order.orderStatusBuyer) }}
+      </p>
       <button @click="viewProvider(order.providerId)">Dados do cedente</button>
     </section>
   </main>
@@ -29,6 +31,17 @@ export default {
   data() {
     return {
       orders: [],
+      statusColors: {
+        0: '#adad00',
+        1: '#00AD8C',
+        2: '#ad0000',
+        3: '#ad0000',
+        4: '#ad0000',
+        5: '#ad0000',
+        6: '#adad00',
+        7: '#00AD8C',
+        8: '#00AD8C',
+      },
     };
   },
   async mounted() {
@@ -101,10 +114,10 @@ export default {
 
 .invoice-head p {
   color: #A1A8B8;
-  line-height: 16px;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
+  line-height: 16px;
 }
 
 .invoice-head p:last-child {
@@ -122,21 +135,21 @@ export default {
 
 .invoice-body p {
   color: #4D5566;
-  line-height: 18px;
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
+  line-height: 18px;
 }
 
-.invoice-body p:nth-child(n+5) {
+.invoice-body p:nth-child(5) {
   color: #00AD8C;
   margin-left: 0;
 }
 
 .invoice-body p:nth-child(6) {
-  line-height: 16px;
   font-size: 12px;
   font-weight: 700;
+  line-height: 16px;
 }
 
 .invoice button {
