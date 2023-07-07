@@ -65,7 +65,7 @@ API_PORT=3001
 #### DATABASE VARS
 MYSQL_USER=root
 MYSQL_PASSWORD=password
-MYSQL_HOST=localhost
+MYSQL_HOST=127.0.0.1
 ```
 
 4. Na raiz do diretório cashforce, execute o seguinte comando para instalar as dependências do projeto:
@@ -80,6 +80,8 @@ npm run install-all
 npm start
 ```
 6. Abra o navegador e acesse o seguinte endereço: http://localhost:8080
+
+**Observação:** O projeto foi desenvolvido utilizando o Node 16. Portanto, pode haver incompatibilidade com versões posteriores do Node.
 
 </details>
 
